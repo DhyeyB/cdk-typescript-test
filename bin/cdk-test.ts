@@ -3,6 +3,7 @@ import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import { CdkTestStack } from '../lib/cdk-test-stack';
 import { S3BucketStack } from '../lib/cdk-s3-stack';
+import { PolicyStack } from '../lib/cdk-policy-stack';
 
 const app = new cdk.App();
 new CdkTestStack(app, 'CdkTestStack', {
@@ -11,4 +12,6 @@ new CdkTestStack(app, 'CdkTestStack', {
 
 });
 
-new S3BucketStack(app, 'S3BucketStack');
+// new S3BucketStack(app, 'S3BucketStack');
+
+new PolicyStack(app, 'PolicyStack');
